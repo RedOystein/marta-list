@@ -36,6 +36,8 @@ resource "azurerm_app_service_plan" "main" {
   kind                = "Linux"
   reserved            = true
 
+  maximum_elastic_worker_count = 0
+
   sku {
     tier     = local.service_plan_sku_tier
     size     = local.service_plan_sku_size
