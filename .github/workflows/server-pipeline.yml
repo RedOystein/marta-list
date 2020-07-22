@@ -20,6 +20,8 @@ jobs:
     
     env:
       AZURE_LOGIN_CREDS: ${{ secrets.AZURE_LOGIN_CREDS }}
+      APP_NAME: martalist
+      PACKAGE_PATH: ./server/martalist
     defaults:
       run:
         working-directory: server
@@ -41,8 +43,8 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal
     
-    #- name: Publish
-    #  run: dotnet publish -c Release -o ./output
+    - name: Publish
+      run: dotnet publish -c Release -o ./${{ env.APP_NAME }}
     
     - name: Azure Login
       uses: Azure/login@v1
@@ -53,9 +55,9 @@ jobs:
       uses: Azure/webapps-deploy@v2
       with:
         # Name of the Azure Web App
-        app-name: martalist
+        app-name: ${{ env.APP_NAME }}
         # Applies to Web App only: Path to package or folder. *.zip, *.war, *.jar or a folder to deploy
-        #package: . # optional, default is .
+        package: ${{ env.PACKAGE_PATH }}
         # Applies to Web App Containers only: Specify the fully qualified container image(s) name. For example, 'myregistry.azurecr.io/nginx:latest' or 'python:3.7.2-alpine/'. For multi-container scenario multiple container image names can be provided (multi-line separated)
         # images: 
         # Applies to Web App Containers only: Path of the Docker-Compose file. Should be a fully qualified path or relative to the default working directory. Required for multi-container scenario
