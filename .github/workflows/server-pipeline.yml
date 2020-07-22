@@ -21,7 +21,7 @@ jobs:
     env:
       AZURE_LOGIN_CREDS: ${{ secrets.AZURE_LOGIN_CREDS }}
       APP_NAME: martalist
-      PACKAGE_PATH: ./server/martalist
+      PACKAGE_PATH: ./server/output/MartaList
     defaults:
       run:
         working-directory: server
@@ -44,8 +44,8 @@ jobs:
       run: dotnet test --no-restore --verbosity normal
     
     - name: Publish
-      run: dotnet publish -c Release -o ./${{ env.APP_NAME }}
-    
+      run: dotnet publish -c Release -o ./output -p:PublishSingleFile=true -r linux-x64
+      
     - name: Azure Login
       uses: Azure/login@v1
       with:
