@@ -23,10 +23,23 @@ az storage container create -n $CONTAINER_NAME --account-name $STORAGE_ACCOUNT_N
 
 RG_ID=$(az group show -n ${RG_NAME} --query 'id' -o tsv)
 SP_INFO=$(az ad sp create-for-rbac -n "${RG_NAME}-deployer" --role contributor --scopes $RG_ID)
+SUB_ID=$(az account show --query 'id' -o tsv)
 
 cat << EOF
+  Terraform variables:
+
   ARM_CLIENT_ID: $(echo $SP_INFO | jq '.appId')
   ARM_CLIENT_SECRET: $(echo $SP_INFO | jq '.password')
   ARM_TENANT_ID: $(echo $SP_INFO | jq '.tenant')
-  ARM_ACCESS_KEY: $(echo $ARM_ACCESS_KEY)
+  ARM_ACCESS_KEY: "${ARM_ACCESS_KEY}"
+  ARM_SUBSCRIPTION_ID: "${SUB_ID}"
+
+  Azure login credentials:
+
+  {
+  "clientId": $(echo $SP_INFO | jq '.appId'),
+  "subscriptionId": "${SUB_ID}",
+  "clientSecret": $(echo $SP_INFO | jq '.password'),
+  "tenantId": $(echo $SP_INFO | jq '.tenant')
+  }
 EOF
