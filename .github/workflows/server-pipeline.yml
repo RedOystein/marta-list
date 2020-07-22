@@ -21,7 +21,7 @@ jobs:
     env:
       AZURE_LOGIN_CREDS: ${{ secrets.AZURE_LOGIN_CREDS }}
       APP_NAME: martalist
-      PACKAGE_PATH: ./server/output/MartaList
+      PACKAGE_PATH: ./server/output
     defaults:
       run:
         working-directory: server
