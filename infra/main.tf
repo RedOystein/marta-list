@@ -52,7 +52,7 @@ resource "azurerm_app_service" "main" {
 
   app_settings = {
     "ConnectionStrings__AzureTable" = azurerm_storage_account.main.primary_connection_string
-    "APPINSIGHTS_KEY" = azurerm_application_insights.main.instrumentation_key
+    "APPINSIGHTS_KEY"               = azurerm_application_insights.main.instrumentation_key
   }
 
   # site_config {
