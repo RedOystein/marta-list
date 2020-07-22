@@ -1,4 +1,4 @@
-namespace Lameno.Models.Responses
+namespace MartaList.Models.Responses
 {
     public class UserOutDto
     {

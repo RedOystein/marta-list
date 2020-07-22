@@ -1,4 +1,4 @@
-namespace Lameno.Exceptions
+namespace MartaList.Exceptions
 {
     public class UserForbiddenException : System.Exception
     {

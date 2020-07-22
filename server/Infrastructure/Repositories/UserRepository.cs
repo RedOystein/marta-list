@@ -2,12 +2,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
-using Lameno.Extensions;
-using Lameno.Infrastructure.Models;
+using MartaList.Extensions;
+using MartaList.Infrastructure.Models;
 using Microsoft.Azure.Cosmos.Table;
 using Microsoft.Extensions.Logging;
 
-namespace Lameno.Infrastructure.Repositories
+namespace MartaList.Infrastructure.Repositories
 {
     public interface IUserRepository
     {

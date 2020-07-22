@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using HotChocolate;
 
-namespace Lameno.GraphQl
+namespace MartaList.GraphQl
 {
     public class CurrentUser
     {

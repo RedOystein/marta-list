@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Lameno.Infrastructure.Models;
+using MartaList.Infrastructure.Models;
 using Microsoft.Azure.Cosmos.Table;
 
-namespace Lameno.Infrastructure.Repositories
+namespace MartaList.Infrastructure.Repositories
 {
     public interface IItemRepository
     {

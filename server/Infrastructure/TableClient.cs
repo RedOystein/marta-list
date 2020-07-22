@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Microsoft.Azure.Cosmos.Table;
 using Microsoft.Extensions.Configuration;
 
-namespace Lameno.Infrastructure
+namespace MartaList.Infrastructure
 {
 
     public interface ITableClient<TEntity> where TEntity : TableEntity, new()

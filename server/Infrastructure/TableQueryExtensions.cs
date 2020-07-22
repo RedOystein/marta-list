@@ -1,6 +1,6 @@
 using Microsoft.Azure.Cosmos.Table;
 
-namespace Lameno.Infrastructure
+namespace MartaList.Infrastructure
 {
     public static class TableQueryExtensions
     {

@@ -1,11 +1,11 @@
 
 using System;
 using System.Threading.Tasks;
-using Lameno.Extensions;
-using Lameno.Infrastructure.Repositories;
-using Lameno.Models.Responses;
+using MartaList.Extensions;
+using MartaList.Infrastructure.Repositories;
+using MartaList.Models.Responses;
 
-namespace Lameno.Core
+namespace MartaList.Core
 {
     public class ApplicationUserService
     {

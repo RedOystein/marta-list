@@ -1,10 +1,10 @@
 
 using System.Linq;
 using System.Threading.Tasks;
-using Lameno.Infrastructure.Repositories;
-using Lameno.Exceptions;
+using MartaList.Infrastructure.Repositories;
+using MartaList.Exceptions;
 
-namespace Lameno.Core
+namespace MartaList.Core
 {
     public interface IUserAuthorizationService
     {

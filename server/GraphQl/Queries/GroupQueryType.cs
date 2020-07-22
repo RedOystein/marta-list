@@ -1,7 +1,7 @@
 using HotChocolate.Types;
-using Lameno.Core;
+using MartaList.Core;
 
-namespace Lameno.GraphQl.Queries
+namespace MartaList.GraphQl.Queries
 {
     public class GroupQueryType : ObjectType<GroupQuery>
     {

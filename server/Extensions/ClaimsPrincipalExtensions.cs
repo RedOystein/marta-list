@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Security.Claims;
 
-namespace Lameno.Extensions
+namespace MartaList.Extensions
 {
     public static class ClaimsPrincipalExtensions
     {

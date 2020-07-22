@@ -1,7 +1,7 @@
 using HotChocolate.Types;
-using Lameno.Models.Responses;
+using MartaList.Models.Responses;
 
-namespace Lameno.GraphQl
+namespace MartaList.GraphQl
 {
     public class ListType : ObjectType<ListOutDto>
     {
@@ -21,7 +21,7 @@ namespace Lameno.GraphQl
                 .Type<ListType<ItemType>>();
             // descriptor.Field("lists")
             //     .Description("Sub-lists that belong to the list")
-            //     .Type<ListType<Lameno.GraphQl.ListType>>();
+            //     .Type<ListType<MartaList.GraphQl.ListType>>();
         }
     }
 }

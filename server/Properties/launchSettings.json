@@ -17,7 +17,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Lameno": {
+    "MartaList": {
       "commandName": "Project",
       "launchBrowser": true,
       "launchUrl": "weatherforecast",

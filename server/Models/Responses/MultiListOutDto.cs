@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace Lameno.Models.Responses
+namespace MartaList.Models.Responses
 {
     public class MultiListOutDto
     {

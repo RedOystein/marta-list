@@ -1,8 +1,8 @@
 using System.Linq;
-using Lameno.Infrastructure.Models;
-using Lameno.Models.Responses;
+using MartaList.Infrastructure.Models;
+using MartaList.Models.Responses;
 
-namespace Lameno.Extensions
+namespace MartaList.Extensions
 {
     public static class OutDtoExtensions
     {

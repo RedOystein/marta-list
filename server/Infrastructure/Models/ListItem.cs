@@ -1,6 +1,6 @@
 using Microsoft.Azure.Cosmos.Table;
 
-namespace Lameno.Infrastructure.Models
+namespace MartaList.Infrastructure.Models
 {
     public class ListItem : TableEntity
     {

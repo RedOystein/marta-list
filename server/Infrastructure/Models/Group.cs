@@ -1,10 +1,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
-using Lameno.Extensions;
+using MartaList.Extensions;
 using Microsoft.Azure.Cosmos.Table;
 
-namespace Lameno.Infrastructure.Models
+namespace MartaList.Infrastructure.Models
 {
     public class Group : TableEntity
     {

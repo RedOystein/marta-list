@@ -1,9 +1,9 @@
 using System.Threading.Tasks;
 using HotChocolate;
-using Lameno.Core;
-using Lameno.Models.Responses;
+using MartaList.Core;
+using MartaList.Models.Responses;
 
-namespace Lameno.GraphQl.Mutations
+namespace MartaList.GraphQl.Mutations
 {
     public class Mutation
     {

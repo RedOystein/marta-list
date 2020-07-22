@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Lameno.Extensions;
-using Lameno.Infrastructure.Models;
+using MartaList.Extensions;
+using MartaList.Infrastructure.Models;
 using Microsoft.Azure.Cosmos.Table;
 
-namespace Lameno.Infrastructure.Repositories
+namespace MartaList.Infrastructure.Repositories
 {
     public interface IListRepository
     {

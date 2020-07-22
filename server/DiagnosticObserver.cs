@@ -11,7 +11,7 @@ using Microsoft.Extensions.DiagnosticAdapter;
 using Microsoft.Extensions.Logging;
 using System.Text.Json;
 
-namespace Lameno
+namespace MartaList
 {
     public class DiagnosticObserver
         : IDiagnosticObserver

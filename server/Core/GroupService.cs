@@ -2,12 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Lameno.Exceptions;
-using Lameno.Extensions;
-using Lameno.Infrastructure.Repositories;
-using Lameno.Models.Responses;
+using MartaList.Exceptions;
+using MartaList.Extensions;
+using MartaList.Infrastructure.Repositories;
+using MartaList.Models.Responses;
 
-namespace Lameno.Core
+namespace MartaList.Core
 {
     public interface IGroupService
     {

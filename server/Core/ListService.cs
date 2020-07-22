@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Lameno.Infrastructure.Repositories;
-using Lameno.Models.Responses;
-using Lameno.Extensions;
+using MartaList.Infrastructure.Repositories;
+using MartaList.Models.Responses;
+using MartaList.Extensions;
 using System;
 
-namespace Lameno.Core
+namespace MartaList.Core
 {
     public class ListService
     {

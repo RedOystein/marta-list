@@ -1,7 +1,7 @@
-using Lameno.Extensions;
+using MartaList.Extensions;
 using Microsoft.Azure.Cosmos.Table;
 
-namespace Lameno.Infrastructure.Models
+namespace MartaList.Infrastructure.Models
 {
     public class User : TableEntity
     {

@@ -1,9 +1,9 @@
 using System.Collections.Generic;
 using HotChocolate;
-using Lameno.Core;
-using Lameno.Models.Responses;
+using MartaList.Core;
+using MartaList.Models.Responses;
 
-namespace Lameno.GraphQl
+namespace MartaList.GraphQl
 {
     public class ListResolvers
     {

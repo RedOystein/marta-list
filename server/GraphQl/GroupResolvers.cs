@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using HotChocolate;
-using Lameno.Core;
-using Lameno.Models.Responses;
+using MartaList.Core;
+using MartaList.Models.Responses;
 using Microsoft.Extensions.Logging;
 
-namespace Lameno.GraphQl
+namespace MartaList.GraphQl
 {
     public class GroupResolvers
     {

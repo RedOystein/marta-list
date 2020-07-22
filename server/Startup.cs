@@ -4,13 +4,13 @@ using HotChocolate;
 using HotChocolate.AspNetCore;
 using HotChocolate.AspNetCore.Interceptors;
 using HotChocolate.Execution;
-using Lameno.Core;
-using Lameno.GraphQl;
-using Lameno.GraphQl.Mutations;
-using Lameno.GraphQl.Queries;
-using Lameno.Infrastructure;
-using Lameno.Infrastructure.Models;
-using Lameno.Infrastructure.Repositories;
+using MartaList.Core;
+using MartaList.GraphQl;
+using MartaList.GraphQl.Mutations;
+using MartaList.GraphQl.Queries;
+using MartaList.Infrastructure;
+using MartaList.Infrastructure.Models;
+using MartaList.Infrastructure.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -18,7 +18,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace Lameno
+namespace MartaList
 {
     public class Startup
     {

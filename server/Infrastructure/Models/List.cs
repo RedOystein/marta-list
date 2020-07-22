@@ -1,8 +1,8 @@
 using System.Collections.Generic;
-using Lameno.Extensions;
+using MartaList.Extensions;
 using Microsoft.Azure.Cosmos.Table;
 
-namespace Lameno.Infrastructure.Models
+namespace MartaList.Infrastructure.Models
 {
     public class List : TableEntity
     {

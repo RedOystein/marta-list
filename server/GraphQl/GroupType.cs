@@ -1,7 +1,7 @@
 using HotChocolate.Types;
-using Lameno.Models.Responses;
+using MartaList.Models.Responses;
 
-namespace Lameno.GraphQl
+namespace MartaList.GraphQl
 {
     public class GroupType : ObjectType<GroupOutDto>
     {
@@ -13,7 +13,7 @@ namespace Lameno.GraphQl
             descriptor.Field<GroupResolvers>(x => x.GetLists(default, default, default))
                 .Description("Lists that are owned by this group")
                 .Name("lists")
-                .Type<ListType<Lameno.GraphQl.ListType>>();
+                .Type<ListType<MartaList.GraphQl.ListType>>();
             descriptor.Field(x => x.Users)
                 .Description("Users that have access to current list")
                 .Name("users")
