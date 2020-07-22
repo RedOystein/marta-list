@@ -7,6 +7,7 @@ locals {
   name                  = "martalist"
   service_plan_sku_tier = "Basic"
   service_plan_sku_size = "B1"
+  alt_location          = "westeurope"
 }
 
 data "azurerm_resource_group" "main" {
@@ -23,7 +24,7 @@ resource "azurerm_storage_account" "main" {
 
 resource "azurerm_application_insights" "main" {
   name                = local.name
-  location            = data.azurerm_resource_group.main.location
+  location            = local.alt_location
   resource_group_name = data.azurerm_resource_group.main.name
   application_type    = "web"
 }
@@ -36,8 +37,9 @@ resource "azurerm_app_service_plan" "main" {
   reserved            = true
 
   sku {
-    tier = local.service_plan_sku_tier
-    size = local.service_plan_sku_size
+    tier     = local.service_plan_sku_tier
+    size     = local.service_plan_sku_size
+    capacity = 1
   }
 }
 
