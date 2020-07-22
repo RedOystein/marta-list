@@ -17,19 +17,47 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
+    
+    env:
+      AZURE_LOGIN_CREDS: ${{ secrets.AZURE_LOGIN_CREDS }}
     defaults:
       run:
         working-directory: server
 
     steps:
     - uses: actions/checkout@v2
+    
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.301
+        dotnet-version: 3.1.30
+    
     - name: Install dependencies
       run: dotnet restore
+    
     - name: Build
       run: dotnet build --configuration Release --no-restore
+    
     - name: Test
       run: dotnet test --no-restore --verbosity normal
+    
+    #- name: Publish
+    #  run: dotnet publish -c Release -o ./output
+    
+    - name: Azure Login
+      uses: Azure/login@v1
+      with:
+        creds: ${{ env.AZURE_LOGIN_CREDS    }}
+    
+    - name: Azure WebApp
+      uses: Azure/webapps-deploy@v2
+      with:
+        # Name of the Azure Web App
+        app-name: martalist
+        # Applies to Web App only: Path to package or folder. *.zip, *.war, *.jar or a folder to deploy
+        #package: . # optional, default is .
+        # Applies to Web App Containers only: Specify the fully qualified container image(s) name. For example, 'myregistry.azurecr.io/nginx:latest' or 'python:3.7.2-alpine/'. For multi-container scenario multiple container image names can be provided (multi-line separated)
+        # images: 
+        # Applies to Web App Containers only: Path of the Docker-Compose file. Should be a fully qualified path or relative to the default working directory. Required for multi-container scenario
+        # configuration-file: # optional
+
