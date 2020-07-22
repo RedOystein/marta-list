@@ -60,6 +60,9 @@ resource "azurerm_app_service" "main" {
   #   linux_fx_version = "DOCKER|appsvcsample/static-site:latest"
   #   always_on        = "true"
   # }
+  site_config {
+    linux_fx_version = "DOTNETCORE|3.1"
+  }
 
   identity {
     type = "SystemAssigned"
