@@ -7,7 +7,6 @@ locals {
   name                  = "martalist"
   service_plan_sku_tier = "Basic"
   service_plan_sku_size = "B1"
-  alt_location          = "westeurope"
 }
 
 data "azurerm_resource_group" "main" {
@@ -24,7 +23,7 @@ resource "azurerm_storage_account" "main" {
 
 resource "azurerm_application_insights" "main" {
   name                = local.name
-  location            = local.alt_location
+  location            = data.azurerm_resource_group.main.location
   resource_group_name = data.azurerm_resource_group.main.name
   application_type    = "web"
 }
@@ -36,12 +35,10 @@ resource "azurerm_app_service_plan" "main" {
   kind                = "Linux"
   reserved            = true
 
-  maximum_elastic_worker_count = 0
 
   sku {
-    tier     = local.service_plan_sku_tier
-    size     = local.service_plan_sku_size
-    capacity = 1
+    tier = local.service_plan_sku_tier
+    size = local.service_plan_sku_size
   }
 }
 

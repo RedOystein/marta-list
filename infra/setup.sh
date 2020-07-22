@@ -3,7 +3,7 @@
 # This script creates the resource group, azure data storage (for tf state) and service principal (for CD)
 
 RG_NAME="martalist"
-RG_LOCATION="norwayeast"
+RG_LOCATION="westeurope"
 STORAGE_ACCOUNT_NAME="martaliststate"
 CONTAINER_NAME="state"
 
