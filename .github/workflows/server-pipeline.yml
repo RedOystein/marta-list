@@ -17,8 +17,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    env:
-      working-directory: ./server
+    defaults:
+      run:
+        working-directory: server
 
     steps:
     - uses: actions/checkout@v2
